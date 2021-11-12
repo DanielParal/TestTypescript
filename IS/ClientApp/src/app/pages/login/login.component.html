@@ -1,0 +1,23 @@
+<div>
+  <form [formGroup]="formLogin" (submit)="onLogin()">
+    <div class="form-group">
+      <input type="text"
+             class="form-control"
+             placeholder="Vaše přihlašovací jméno *"
+             formControlName="username" />
+    </div>
+    <div class="form-group">
+      <input type="password"
+             class="form-control"
+             placeholder="Vaše heslo *"
+             formControlName="password" />
+    </div>
+    <div class="form-group text-center">
+      <button type="submit"
+              class="btn btn-primary col-8"
+              [disabled]="!formLogin?.valid">
+        Přihlásit se
+      </button>
+    </div>
+  </form>
+</div>
